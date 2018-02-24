@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+</head>
+
+<body>
+    <div>
+        <img src="1.jpg" alt="" id='imgbox' style="display: none;">
+        <img src="3.jpg" alt="" id='headerImg' style="display: none;">
+        <canvas id="canvas" width="800" height="600" style="margin: 100px;"></canvas>
+    </div>
+</body>
+<script>
+
+ 
+  window.onload=function(){
+    function draw() {
+       var cvs = document.getElementById('canvas');
+      var ctx = document.getElementById('canvas').getContext('2d');
+      var imgs =new Image();
+      imgs.src = '1.jpg'
+      // imgs.onload=function(){
+      //   ctx.drawImage(imgs,0,0,250,390);
+      //   var s = cvs.toDataURL('image/jpeg', 0.80);
+      // console.log(s)
+      // }
+      ctx.drawImage(document.getElementById('imgbox'),0,0,250,390);
+      ctx.drawImage(document.getElementById('headerImg'),
+                  120,59,556,354,9,79,248,210);
+     
+      
+    } 
+    draw();  
+  }
+ 
+</script>
+
+</html>
